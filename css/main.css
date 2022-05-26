@@ -1,0 +1,53 @@
+
+/*----------------------end carousel-----------------------*/
+
+/*----------Interview Cards----------*/
+.karte-pink {
+	background: #72195A;
+	border-radius: 10px;
+	padding-bottom: 15px;
+}
+.karte-purple {
+	background: #6B5CA5;
+	border-radius: 10px;
+	padding-bottom: 15px;
+}
+.karte-white {
+	background: #F4F2F2;
+	border-radius: 10px;
+	padding-bottom: 15px;
+}
+.karte-profile-picture{
+	margin-top: -50px;
+	margin-bottom: 25px;
+	box-shadow: 0px 10px 8px #C0C0C0;
+}
+.karte-shadow-math {
+		box-shadow: 0px 10px 8px #216687;
+}
+.karte-shadow-physics {
+	box-shadow: 0px 10px 8px #0F263D;
+}
+.karte-shadow-biology {
+	box-shadow: 0px 10px 8px #1A7E31;
+}
+.karte-shadow-chemsitry{
+	box-shadow: 0px 10px 8px #4F2070;
+}
+.karte-shadow-it{
+		box-shadow: 0px 10px 8px #7E2348;
+}
+.karte-shadow-more{
+		box-shadow: 0px 10px 8px #7C3B00;
+}
+.karte-box{
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+@media (max-width: 1200px) {
+	.karte {
+		margin-bottom: 70px;
+		margin-top: 25px;
+	}
+
+}
