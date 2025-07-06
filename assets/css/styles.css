@@ -11619,12 +11619,12 @@ html {
   width: 75vw;
   border-radius: 5vw;
   margin-top: 5vw;
-  max-height: 40rem;
-  max-width: 40rem;
+  max-height: 15rem;
+  max-width: 15rem;
 }
 .profile .profile-img {
   height: 80vw;
-  max-height: 45rem;
+  max-height: 20rem;
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -11651,7 +11651,7 @@ html {
 .profile .dots-3 {
   position: absolute;
   width: 3vw;
-  left: 1.5vw;
+  left: 0.5vw;
   bottom: 6.05vw;
 }
 .profile .dots-3 svg {
@@ -11660,7 +11660,7 @@ html {
 .profile .dots-4 {
   position: absolute;
   width: 3vw;
-  left: -4vw;
+  left: -6vw;
   bottom: 4vw;
 }
 .profile .dots-4 svg {
@@ -11681,7 +11681,7 @@ html {
   }
   .profile .dots-2 {
     width: 3vw;
-    right: -4vw;
+    right: -5vw;
   }
   .profile .dots-3 {
     width: 3vw;
@@ -11726,20 +11726,20 @@ html {
     height: 45vw;
   }
   .profile .dots-1 {
-    width: 1.5vw;
-    right: 0.75vw;
+    width: 2.5vw;
+    right: 1.25vw;
   }
   .profile .dots-2 {
-    width: 1.5vw;
-    right: -2vw;
+    width: 2.5vw;
+    right: -4vw;
   }
   .profile .dots-3 {
-    width: 1.5vw;
+    width: 2.5vw;
     left: 0.75vw;
   }
   .profile .dots-4 {
-    width: 1.5vw;
-    left: -2vw;
+    width: 2.5vw;
+    left: -4vw;
   }
 }
 @media (min-width: 1200px) {
