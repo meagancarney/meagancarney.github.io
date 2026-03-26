@@ -10,6 +10,78 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/responsive.css">
+  <style>
+    /* ── Podcast platform buttons ── */
+    .platform-btns {
+      display: flex;
+      gap: 0.75rem;
+      margin-top: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-platform {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      font-size: 0.92rem;
+      font-weight: 700;
+      padding: 0.6rem 1.25rem;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: filter 0.2s ease, transform 0.15s ease;
+      letter-spacing: 0.01em;
+    }
+
+    .btn-platform:hover {
+      filter: brightness(1.12);
+      transform: translateY(-1px);
+      color: inherit;
+    }
+
+    .btn-platform svg {
+      flex-shrink: 0;
+    }
+
+    .btn-platform--apple {
+      background: #000;
+      color: #fff;
+    }
+
+    .btn-platform--apple:hover {
+      color: #fff;
+    }
+
+    .btn-platform--spotify {
+      background: #1DB954;
+      color: #fff;
+    }
+
+    .btn-platform--spotify:hover {
+      color: #fff;
+    }
+
+    /* ── Clickable icon + title link ── */
+    .media-icon-link {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .media-icon-link:hover .media-icon {
+      filter: brightness(1.15);
+    }
+
+    .media-title-link {
+      color: var(--text-primary);
+      text-decoration: none;
+    }
+
+    .media-title-link:hover {
+      color: var(--uq-purple);
+    }
+  </style>
 </head>
 <body>
   <a href="#main" class="sr-only">Skip to main content</a>
@@ -27,7 +99,7 @@
           <li><a href="publications.html">Publications</a></li>
           <li><a href="projects.html">Projects</a></li>
           <li><a href="students.html">Students</a></li>
-          <li><a href="media.html">Media &amp; Outreach</a></li>
+          <li><a href="media.html" class="active">Media &amp; Outreach</a></li>
           <li><a href="cv.html">CV</a></li>
         </ul>
       </nav>
@@ -52,12 +124,16 @@
         <div class="card featured-media fade-in" style="margin-bottom: 3rem;">
           <span class="featured-badge">Featured Talk</span>
           <div class="media-card">
-            <div class="media-icon media-icon--talk" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
-            </div>
+            <!-- Icon links to talk URL -->
+            <a href="https://www.tedxuq.com/past-talks/" target="_blank" rel="noopener" class="media-icon-link" aria-label="View TEDxUQ talk">
+              <div class="media-icon media-icon--talk" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+              </div>
+            </a>
             <div class="media-body">
               <div class="media-type" style="color: var(--uq-magenta);">TEDx Talk</div>
-              <h3>Using machine learning to advance medical diagnosis</h3>
+              <!-- h3 links to talk URL -->
+              <h3><a href="https://www.tedxuq.com/past-talks/" target="_blank" rel="noopener" class="media-title-link">Using machine learning to advance medical diagnosis</a></h3>
               <div class="media-date">December 2024 &middot; TEDxUQ 2024 &lsquo;Pulse: Rhythm of Change&rsquo;</div>
               <p>In this talk, Dr. Carney explores how machine learning algorithms can be applied to medical decision-making, demystifying the AI techniques that are transforming how we approach diagnosis and patient care. The presentation bridges the gap between abstract mathematical methods and their tangible impact on healthcare.</p>
               <a href="https://www.tedxuq.com/past-talks/" target="_blank" rel="noopener" class="btn-primary" style="margin-top: 1rem; display: inline-block; font-size: 0.88rem; padding: 0.5rem 1.2rem;">View on TEDxUQ</a>
@@ -73,33 +149,51 @@
           <!-- Women in Science Podcast -->
           <div class="card fade-in">
             <div class="media-card">
-              <div class="media-icon media-icon--podcast" aria-hidden="true">
-                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg>
-              </div>
+              <!-- Icon links to Apple Podcasts (primary platform URL) -->
+              <a href="https://podcasts.apple.com/us/podcast/women-in-science/id1527735565" target="_blank" rel="noopener" class="media-icon-link" aria-label="Listen on Apple Podcasts">
+                <div class="media-icon media-icon--podcast" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg>
+                </div>
+              </a>
               <div class="media-body">
                 <div class="media-type" style="color: var(--uq-blue);">Podcast</div>
-                <h3>Women in Science Podcast</h3>
+                <!-- h3 links to Apple Podcasts -->
+                <h3><a href="https://podcasts.apple.com/us/podcast/women-in-science/id1527735565" target="_blank" rel="noopener" class="media-title-link">Women in Science Podcast</a></h3>
                 <div class="media-date">17 September 2024 &middot; Hosted by Dr. Kirsty Short (UQ)</div>
                 <p>Dr. Carney discusses her journey in mathematics and how she uses machine learning and extreme value theory to make informed decisions and navigate increasingly complex, dynamic systems&mdash;from predicting hurricanes to analysing immune responses.</p>
-                <div style="display: flex; gap: 0.75rem; margin-top: 0.75rem; flex-wrap: wrap;">
-                  <a href="https://podcasts.apple.com/us/podcast/women-in-science/id1527735565" target="_blank" rel="noopener" class="tag tag--blue" style="text-decoration: none;">Apple Podcasts</a>
-                  <a href="https://open.spotify.com/show/6Y94xKZt9JhI8KqsOuhLBS" target="_blank" rel="noopener" class="tag tag--green" style="text-decoration: none;">Spotify</a>
+                <!-- Bold platform buttons replacing plain tag pills -->
+                <div class="platform-btns">
+                  <a href="https://podcasts.apple.com/us/podcast/women-in-science/id1527735565" target="_blank" rel="noopener" class="btn-platform btn-platform--apple">
+                    <!-- Apple Podcasts icon -->
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 0C5.374 0 0 5.374 0 12s5.374 12 12 12 12-5.374 12-12S18.626 0 12 0zm0 2.4c5.298 0 9.6 4.302 9.6 9.6s-4.302 9.6-9.6 9.6S2.4 17.298 2.4 12 6.702 2.4 12 2.4zm0 2.4a4.8 4.8 0 1 0 0 9.6 4.8 4.8 0 0 0 0-9.6zm0 1.6a3.2 3.2 0 1 1 0 6.4 3.2 3.2 0 0 1 0-6.4zm-.8 9.6v3.2h1.6V16h-1.6zm-3.394-1.206l-1.131 1.131 1.131 1.131 1.131-1.131-1.131-1.131zm8.788 0l-1.131 1.131 1.131 1.131 1.131-1.131-1.131-1.131z"/></svg>
+                    Apple Podcasts
+                  </a>
+                  <a href="https://open.spotify.com/show/6Y94xKZt9JhI8KqsOuhLBS" target="_blank" rel="noopener" class="btn-platform btn-platform--spotify">
+                    <!-- Spotify icon -->
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+                    Spotify
+                  </a>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- BrisScience -->
+          <!-- BrisScience — YouTube URL added -->
           <div class="card fade-in">
             <div class="media-card">
-              <div class="media-icon media-icon--event" aria-hidden="true">
-                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-              </div>
+              <!-- Icon links to YouTube recording -->
+              <a href="https://www.youtube.com/watch?v=OmdHSs8eAwA" target="_blank" rel="noopener" class="media-icon-link" aria-label="Watch BrisScience talk on YouTube">
+                <div class="media-icon media-icon--event" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                </div>
+              </a>
               <div class="media-body">
                 <div class="media-type" style="color: var(--uq-orange);">Public Event</div>
-                <h3>BrisScience: Science Comedy Spectacular!</h3>
+                <!-- h3 links to YouTube recording -->
+                <h3><a href="https://www.youtube.com/watch?v=OmdHSs8eAwA" target="_blank" rel="noopener" class="media-title-link">BrisScience: Science Comedy Spectacular!</a></h3>
                 <div class="media-date">6 November 2023 &middot; The Edge, South Bank, Brisbane</div>
                 <p>A panel-style science comedy event examining the top science stories of 2023&mdash;and some of the quirkier ones too. Hosted by Dr. Joel Gilmore, the evening brought together researchers for a lighter look at science in the style of popular panel shows, featuring competition, entertainment, and comedy.</p>
+                <a href="https://www.youtube.com/watch?v=OmdHSs8eAwA" target="_blank" rel="noopener" class="btn-primary" style="margin-top: 1rem; display: inline-block; font-size: 0.88rem; padding: 0.5rem 1.2rem;">Watch on YouTube</a>
               </div>
             </div>
           </div>
@@ -114,7 +208,7 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--uq-purple)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
           </div>
           <div>
-            <h3>Anomalous Almanac</h3>
+            <h3><a href="https://anomalousalmanac.wordpress.com/" target="_blank" rel="noopener" class="media-title-link">Anomalous Almanac</a></h3>
             <p>A blog exploring extreme weather events, rare event analysis, and the mathematics behind the world&rsquo;s most extraordinary natural phenomena.</p>
             <a href="https://anomalousalmanac.wordpress.com/" target="_blank" rel="noopener" class="view-all">Visit the blog</a>
           </div>
