@@ -1,0 +1,216 @@
+/* ============================================
+   Responsive Styles & Mobile Navigation
+   ============================================ */
+
+/* --- Tablet: ≤1024px --- */
+@media (max-width: 1024px) {
+  .home-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .sidebar {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
+  .profile-photo-wrap {
+    width: 220px;
+  }
+
+  .profile-photo-fallback {
+    width: 180px;
+    aspect-ratio: 1;
+  }
+
+  .sidebar .card {
+    flex: 1;
+    min-width: 250px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* --- Mobile: ≤768px --- */
+@media (max-width: 768px) {
+  :root {
+    --header-height: 60px;
+  }
+
+  /* Show hamburger */
+  .nav-toggle {
+    display: block;
+  }
+
+  /* Mobile nav panel */
+  .nav-links {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    background: var(--bg-primary);
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 999;
+  }
+
+  body.nav-open .nav-links {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid var(--border);
+    border-left: 3px solid transparent;
+    border-bottom-width: 1px;
+  }
+
+  .nav-links a:hover,
+  .nav-links a.active {
+    border-bottom: 1px solid var(--border);
+    border-left-color: var(--uq-purple);
+    background: var(--bg-secondary);
+  }
+
+  /* Hero */
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero .tags {
+    gap: 0.4rem;
+  }
+
+  /* Section titles */
+  .section-title {
+    font-size: 1.4rem;
+  }
+
+  /* Card grid */
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Sidebar */
+  .sidebar {
+    flex-direction: column;
+  }
+
+  .profile-photo-wrap {
+    width: 200px;
+    margin: 0 auto;
+    border-width: 6px;
+    border-radius: 24px;
+  }
+
+  .profile-photo-fallback {
+    width: 150px;
+    margin: 0 auto;
+  }
+
+  /* Footer */
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  /* Container padding */
+  .container {
+    padding: 0 1.25rem;
+  }
+
+  /* Page header */
+  .page-header h1 {
+    font-size: 1.6rem;
+  }
+
+  /* Media cards */
+  .media-card {
+    flex-direction: column;
+  }
+
+  .media-card .media-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+  }
+
+  /* Featured media */
+  .featured-media {
+    padding: 1.25rem;
+  }
+
+  /* Student items */
+  .student-item {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .student-item .student-name {
+    min-width: auto;
+  }
+
+  /* Blog callout */
+  .blog-callout {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* --- Small Mobile: ≤480px --- */
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.65rem;
+  }
+
+  .hero .subtitle {
+    font-size: 1rem;
+  }
+
+  .tag {
+    font-size: 0.72rem;
+    padding: 0.2rem 0.65rem;
+  }
+
+  .section-title {
+    font-size: 1.25rem;
+  }
+
+  .card {
+    padding: 1.15rem;
+  }
+
+  .home-grid {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .page-content {
+    padding: 2rem 0;
+  }
+
+  .grant-item {
+    padding: 1rem;
+  }
+
+  .btn-primary {
+    width: 100%;
+    text-align: center;
+  }
+}
